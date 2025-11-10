@@ -1,0 +1,566 @@
+body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .main-header {
+        background: linear-gradient(135deg, #9e9fd3 0%, #667eea 100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 57px;
+        z-index: 1035;
+        margin-left: 250px;
+        transition: margin-left 0.3s ease-in-out;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+    
+    .main-sidebar {
+      background: linear-gradient(135deg, rgba(30, 30, 40, 0.95) 0%, rgba(50, 50, 70, 0.95) 100%), url('sidebar.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 1030;
+      left: -250px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .sidebar-open .main-sidebar {
+      left: 0;
+      transform: translateX(0);
+    }
+
+    .main-sidebar::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, rgba(30, 30, 40, 0.9) 0%, rgba(50, 50, 70, 0.85) 100%);
+      z-index: 1;
+    }
+
+    .sidebar {
+      position: relative;
+      z-index: 2;
+      width: 250px;
+    }
+
+    .nav-sidebar .nav-link {
+      color: #cbd5e0;
+      padding: 14px 20px;
+      margin: 3px 12px;
+      border-radius: 8px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-sidebar .nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 3px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-sidebar .nav-link:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      transform: translateX(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-sidebar .nav-link:hover::before {
+      transform: scaleY(1);
+    }
+
+    .nav-sidebar .nav-link.active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      transform: translateX(5px);
+    }
+
+    .nav-sidebar .nav-link.active::before {
+      transform: scaleY(1);
+      background: #fff;
+    }
+
+    .nav-treeview .nav-link {
+      padding-left: 3.5rem;
+      font-size: 14px;
+      margin: 2px 12px;
+      border-radius: 6px;
+    }
+
+.user-panel .info a {
+    color: white;
+}
+
+.content-wrapper {
+    margin-left: 250px;
+    margin-top: 40px;
+    padding: 15px;
+    min-height: 100vh;
+    position: relative;
+    z-index: 800; /* Lower than sidebar */
+}
+
+.main-footer {
+    background-color: #f3f4f6;
+    border-top: 1px solid #ddd;
+    font-size: 12px;
+    margin-left: 250px;
+    z-index: 800;
+}
+.avatar {
+    width: 45px;
+    height: 45px;
+}
+
+.small-box {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.small-box:hover {
+    transform: translateY(-4px);
+}
+
+.small-box .icon {
+    font-size: 3rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: rgba(255,255,255,0.3);
+}
+
+.preview-image {
+    max-height: 150px;
+    margin-bottom: 10px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.icon-btn:focus {
+    outline: none;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    transform: translateY(-1px);
+}
+
+/* DataTables responsive styling */
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+    color: #333;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Ensure table is properly styled on all devices */
+#citizenTable {
+    width: 100% !important;
+    table-layout: auto;
+    word-wrap: break-word;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 991.98px) {
+    .main-sidebar {
+        z-index: 1050 !important;
+    }
+    .content-wrapper {
+        margin-left: 0 !important;
+        padding: 10px !important;
+    }
+    .main-footer {
+        margin-left: 0 !important;
+    }
+}
+
+/* Top navbar user image */
+.top-user-img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+/* Mobile Table Optimization */
+@media (max-width: 767.98px) {
+    /* Keep table structure but optimize for mobile */
+    .table-responsive {
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        background: white;
+    }
+    
+    #citizenTable {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+    
+    #citizenTable thead th {
+        font-size: 12px;
+        padding: 8px 6px;
+        white-space: nowrap;
+    }
+    
+    #citizenTable tbody td {
+        padding: 8px 6px;
+        vertical-align: middle;
+    }
+    
+    /* Optimize column widths for mobile */
+    #citizenTable th:nth-child(1), /* # */
+    #citizenTable td:nth-child(1) {
+        width: 40px;
+        text-align: center;
+    }
+    
+    #citizenTable th:nth-child(2), /* Username */
+    #citizenTable td:nth-child(2) {
+        min-width: 80px;
+        max-width: 100px;
+        word-break: break-word;
+    }
+    
+    #citizenTable th:nth-child(3), /* Full Name */
+    #citizenTable td:nth-child(3) {
+        min-width: 100px;
+        max-width: 120px;
+        word-break: break-word;
+    }
+    
+    #citizenTable th:nth-child(4), /* Gender */
+    #citizenTable td:nth-child(4) {
+        width: 60px;
+        text-align: center;
+    }
+    
+    #citizenTable th:nth-child(5), /* Birthday */
+    #citizenTable td:nth-child(5) {
+        width: 90px;
+        white-space: nowrap;
+    }
+    
+    #citizenTable th:nth-child(6), /* Contact */
+    #citizenTable td:nth-child(6) {
+        width: 100px;
+        word-break: break-word;
+    }
+    
+    #citizenTable th:nth-child(7), /* Status */
+    #citizenTable td:nth-child(7) {
+        width: 80px;
+        text-align: center;
+    }
+    
+    #citizenTable th:nth-child(8), /* Actions */
+    #citizenTable td:nth-child(8) {
+        width: 120px;
+        text-align: center;
+    }
+    
+    /* Optimize action buttons for mobile */
+    #citizenTable .btn-group {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 2px;
+    }
+    
+    #citizenTable .btn-group .btn {
+        padding: 4px 6px;
+        font-size: 11px;
+        min-width: 28px;
+        height: 28px;
+    }
+    
+    #citizenTable .btn-group .btn i {
+        font-size: 10px;
+    }
+    
+    /* Status badges */
+    #citizenTable .badge {
+        font-size: 10px;
+        padding: 4px 6px;
+    }
+    
+    /* DataTables controls optimization */
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_wrapper .dataTables_filter {
+        margin-bottom: 10px;
+    }
+    
+    .dataTables_wrapper .dataTables_length select,
+    .dataTables_wrapper .dataTables_filter input {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+    
+    .dataTables_wrapper .dataTables_info {
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        padding: 4px 8px;
+        font-size: 12px;
+        margin: 0 2px;
+    }
+    
+    /* Card header optimization */
+    .card-header {
+        padding: 12px 15px;
+    }
+    
+    .card-header h3 {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    
+    .card-header .btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+/* Extra small devices optimization */
+@media (max-width: 575.98px) {
+    .content-wrapper {
+        padding: 8px !important;
+    }
+    
+    #citizenTable {
+        font-size: 12px;
+    }
+    
+    #citizenTable thead th {
+        font-size: 11px;
+        padding: 6px 4px;
+    }
+    
+    #citizenTable tbody td {
+        padding: 6px 4px;
+    }
+    
+    /* Further optimize column widths */
+    #citizenTable th:nth-child(1), /* # */
+    #citizenTable td:nth-child(1) {
+        width: 30px;
+    }
+    
+    #citizenTable th:nth-child(2), /* Username */
+    #citizenTable td:nth-child(2) {
+        min-width: 70px;
+        max-width: 80px;
+    }
+    
+    #citizenTable th:nth-child(3), /* Full Name */
+    #citizenTable td:nth-child(3) {
+        min-width: 80px;
+        max-width: 100px;
+    }
+    
+    #citizenTable .btn-group .btn {
+        padding: 3px 4px;
+        font-size: 10px;
+        min-width: 24px;
+        height: 24px;
+    }
+    
+    #citizenTable .btn-group .btn i {
+        font-size: 9px;
+    }
+    
+    /* DataTables buttons optimization */
+    .dt-buttons .btn {
+        font-size: 11px !important;
+        padding: 4px 8px !important;
+        margin: 2px !important;
+    }
+}
+
+/* Responsive Modals */
+@media (max-width: 575.98px) {
+    .modal-dialog {
+        margin: 0.5rem;
+        max-width: 100% !important;
+    }
+
+    .modal-body .row {
+        flex-direction: column;
+    }
+
+    .modal-body .col-md-6 {
+        max-width: 100%;
+    }
+
+    .form-group label {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .input-group .input-group-text {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .form-control,
+    .form-control-file,
+    textarea,
+    select {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .preview-image {
+        max-height: 120px;
+        width: auto;
+    }
+    
+    /* Improve modal button spacing */
+    .modal-footer .btn {
+        margin: 4px;
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Footer Responsive */
+@media (max-width: 575.98px) {
+    .main-footer {
+        font-size: 11px;
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+/* Navbar Responsiveness */
+@media (max-width: 575.98px) {
+    .top-user-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .navbar .nav-link {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+/* Enhanced mobile experience */
+@media (max-width: 575.98px) {
+    /* Slightly larger touch targets and text */
+    body {
+        font-size: 14px;
+    }
+    
+    /* Ensure table remains usable */
+    .table-responsive {
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+/* Loading and transition states */
+#citizenTable tr {
+    transition: all 0.2s ease;
+}
+
+#citizenTable tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Empty state styling */
+.dataTables_empty {
+    padding: 40px 20px;
+    color: #64748b;
+    font-style: italic;
+    text-align: center;
+}
+
+/* DataTables export buttons mobile optimization */
+@media (max-width: 767.98px) {
+    .dt-buttons {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .dt-buttons .btn {
+        margin: 2px;
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    .dt-button-collection {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        max-width: 90vw;
+    }
+}
+
+/* Ensure horizontal scrolling works properly */
+.table-responsive {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}

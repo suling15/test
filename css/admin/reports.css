@@ -1,0 +1,272 @@
+body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .main-header {
+        background: linear-gradient(135deg, #9e9fd3 0%, #667eea 100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 57px;
+        z-index: 1035;
+        margin-left: 250px;
+        transition: margin-left 0.3s ease-in-out;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+    
+    .main-sidebar {
+      background: linear-gradient(135deg, rgba(30, 30, 40, 0.95) 0%, rgba(50, 50, 70, 0.95) 100%), url('sidebar.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 1030;
+      left: -250px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .sidebar-open .main-sidebar {
+      left: 0;
+      transform: translateX(0);
+    }
+
+    .main-sidebar::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, rgba(30, 30, 40, 0.9) 0%, rgba(50, 50, 70, 0.85) 100%);
+      z-index: 1;
+    }
+
+    .sidebar {
+      position: relative;
+      z-index: 2;
+      width: 250px;
+    }
+
+    .nav-sidebar .nav-link {
+      color: #cbd5e0;
+      padding: 14px 20px;
+      margin: 3px 12px;
+      border-radius: 8px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-sidebar .nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 3px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-sidebar .nav-link:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      transform: translateX(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-sidebar .nav-link:hover::before {
+      transform: scaleY(1);
+    }
+
+    .nav-sidebar .nav-link.active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      transform: translateX(5px);
+    }
+
+    .nav-sidebar .nav-link.active::before {
+      transform: scaleY(1);
+      background: #fff;
+    }
+
+    .nav-treeview .nav-link {
+      padding-left: 3.5rem;
+      font-size: 14px;
+      margin: 2px 12px;
+      border-radius: 6px;
+    }
+
+    .user-panel .info a {
+        color: white;
+    }
+
+    .content-wrapper {
+        margin-left: 250px;
+        margin-top: 40px;
+        padding: 15px;
+        min-height: 100vh;
+        position: relative;
+        z-index: 800; /* Lower than sidebar */
+    }
+
+    .main-footer {
+        background-color: #f3f4f6;
+        border-top: 1px solid #ddd;
+        font-size: 12px;
+        margin-left: 250px;
+        z-index: 800;
+    }
+
+    .logo-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .logo-header img {
+        height: 100px;
+        width: auto;
+    }
+
+    .logo-header .report-title {
+        flex: 1;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .no-feedback {
+        color: #6c757d;
+        font-style: italic;
+    }
+
+    .alert-info {
+        background-color: #d1ecf1;
+        border-color: #bee5eb;
+        color: 0c5460;
+    }
+
+    .form-inline .form-control,
+    .form-inline select {
+        margin: 0 5px;
+        padding: 5px 10px;
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, #9e9fd3ff, #858586ff);
+        color: white;
+    }
+
+    /* Top navbar user image */
+    .top-user-img {
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        border: 2px solid #fff;
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    /* Fix for AdminLTE sidebar */
+    .sidebar-mini .content-wrapper, 
+    .sidebar-mini .main-footer {
+        margin-left: 4.6rem;
+    }
+
+    /* MOBILE-ONLY ADJUSTMENTS */
+    @media (max-width: 991.98px) {
+        /* Sidebar adjustments for mobile */
+        .main-sidebar {
+            z-index: 1050 !important;
+        }
+        
+        /* Content wrapper adjustments for mobile */
+        .content-wrapper {
+            margin-left: 0 !important;
+            padding: 15px;
+        }
+        
+        /* Logo header adjustments for mobile */
+        .logo-header {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .logo-header img {
+            height: 70px;
+            margin-bottom: 10px;
+        }
+        
+        .logo-header .report-title {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+        
+        /* Form adjustments for mobile */
+        .form-inline {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        
+        .form-inline .form-control,
+        .form-inline select {
+            margin: 5px 0;
+            width: 100%;
+        }
+        
+        /* Card adjustments for mobile */
+        .card-header h3 {
+            font-size: 1.1rem;
+        }
+        
+        /* Summary statistics adjustments for mobile */
+        .row .col-md-6 {
+            margin-bottom: 20px;
+        }
+        
+        /* Table adjustments for mobile */
+        .table-responsive {
+            overflow-x: auto;
+        }
+        
+        table {
+            font-size: 13px;
+        }
+        
+        table th, table td {
+            padding: 8px 10px;
+        }
+        
+        .badge {
+            font-size: 11px;
+            padding: 4px 8px;
+        }
+        
+        /* Chart adjustments for mobile */
+        .chart-container {
+            height: 250px;
+        }
+        
+        /* Footer adjustments for mobile */
+        .main-footer {
+            padding: 10px;
+            font-size: 12px;
+        }
+        
+        /* Fix for AdminLTE sidebar on mobile */
+        .sidebar-mini .content-wrapper, 
+        .sidebar-mini .main-footer {
+            margin-left: 0;
+        }
+    }
+    

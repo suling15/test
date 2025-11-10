@@ -1,0 +1,713 @@
+body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .main-header {
+        background: linear-gradient(135deg, #9e9fd3 0%, #667eea 100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 57px;
+        z-index: 1035;
+        margin-left: 250px;
+        transition: margin-left 0.3s ease-in-out;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+    
+    .main-sidebar {
+      background: linear-gradient(135deg, rgba(30, 30, 40, 0.95) 0%, rgba(50, 50, 70, 0.95) 100%), url('sidebar.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 1030;
+      left: -250px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .sidebar-open .main-sidebar {
+      left: 0;
+      transform: translateX(0);
+    }
+
+    .main-sidebar::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, rgba(30, 30, 40, 0.9) 0%, rgba(50, 50, 70, 0.85) 100%);
+      z-index: 1;
+    }
+
+    .sidebar {
+      position: relative;
+      z-index: 2;
+      width: 250px;
+    }
+
+    .nav-sidebar .nav-link {
+      color: #cbd5e0;
+      padding: 14px 20px;
+      margin: 3px 12px;
+      border-radius: 8px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-sidebar .nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 3px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-sidebar .nav-link:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      transform: translateX(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-sidebar .nav-link:hover::before {
+      transform: scaleY(1);
+    }
+
+    .nav-sidebar .nav-link.active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      transform: translateX(5px);
+    }
+
+    .nav-sidebar .nav-link.active::before {
+      transform: scaleY(1);
+      background: #fff;
+    }
+
+    .nav-treeview .nav-link {
+      padding-left: 3.5rem;
+      font-size: 14px;
+      margin: 2px 12px;
+      border-radius: 6px;
+    }
+
+.user-panel .info a {
+    color: white;
+}
+
+.content-wrapper {
+    margin-left: 250px;
+    margin-top: 40px;
+    padding: 15px;
+    min-height: 100vh;
+    position: relative;
+    z-index: 800;
+}
+
+.main-footer {
+    background-color: #f3f4f6;
+    border-top: 1px solid #ddd;
+    font-size: 12px;
+    margin-left: 250px;
+    z-index: 800;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+}
+
+.small-box {
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.small-box:hover {
+    transform: translateY(-4px);
+}
+
+.small-box .icon {
+    font-size: 3rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: rgba(255,255,255,0.3);
+}
+
+.preview-image {
+    max-height: 150px;
+    margin-bottom: 10px;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.icon-btn:focus {
+    outline: none;
+}
+
+.icon-btn:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    transform: translateY(-1px);
+}
+
+.service-badge {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+}
+
+.select2-container--default .select2-selection--multiple {
+    min-height: 38px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+/* Action buttons styling */
+.btn-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: all 0.3s ease;
+    margin: 2px;
+}
+
+.btn-view {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn-view:hover {
+    background-color: #138496;
+    transform: scale(1.1);
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+    transform: scale(1.1);
+}
+
+.btn-print {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-print:hover {
+    background-color: #5a6268;
+    transform: scale(1.1);
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 991.98px) {
+    .main-sidebar {
+        z-index: 1050 !important;
+    }
+
+    .sidebar-mini .content-wrapper, 
+    .sidebar-mini .main-footer {
+        margin-left: 0;
+    }
+    
+    .content-wrapper {
+        margin-left: 0 !important;
+        padding: 10px;
+        width: 100vw;
+        overflow-x: auto;
+    }
+
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        margin-bottom: 15px;
+    }
+
+    #staffTable {
+        width: 100%;
+        min-width: 600px;
+        border-collapse: collapse;
+        font-size: 13px;
+    }
+
+    #staffTable th {
+        background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+        padding: 12px 8px;
+        text-align: left;
+        font-weight: 600;
+        color: #495057;
+        border-bottom: 2px solid #dee2e6;
+        white-space: nowrap;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+    #staffTable td {
+        padding: 12px 8px;
+        border-bottom: 1px solid #e9ecef;
+        vertical-align: top;
+        background: white;
+    }
+
+    #staffTable tr:last-child td {
+        border-bottom: none;
+    }
+
+    #staffTable tr:hover td {
+        background-color: #f8f9fa;
+    }
+
+    #staffTable .service-badge {
+        font-size: 0.65rem;
+        padding: 2px 4px;
+        margin: 1px;
+        display: inline-block;
+        max-width: 80px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    #staffTable .action-buttons {
+        display: flex;
+        gap: 5px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    #staffTable .btn-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        font-size: 12px;
+        transition: all 0.2s ease;
+    }
+
+    .card, .table-responsive {
+        max-width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .btn, .form-control, .select2-container, .modal-footer .btn {
+        min-height: 44px;
+        font-size: 16px;
+    }
+    
+    .modal-dialog {
+        margin: 10px;
+        max-width: calc(100vw - 20px);
+    }
+    
+    .modal-content {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    
+    .modal-body {
+        padding: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .input-group-text {
+        min-width: 45px;
+        justify-content: center;
+    }
+
+    .card-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: white;
+        padding: 15px 10px;
+    }
+    
+    .card-title {
+        font-size: 16px;
+        margin: 0;
+    }
+    
+    .dt-buttons {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .dt-buttons .btn {
+        margin: 2px;
+        font-size: 12px;
+        padding: 8px 12px;
+        min-height: 40px;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 992px) {
+    #staffTable {
+        min-width: auto;
+        font-size: 14px;
+    }
+    
+    #staffTable th,
+    #staffTable td {
+        padding: 12px;
+    }
+    
+    #staffTable .service-badge {
+        font-size: 0.75rem;
+        max-width: none;
+    }
+    
+    #staffTable .btn-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+/* SweetAlert adjustments for mobile */
+.swal2-popup {
+    border-radius: 12px;
+    padding: 1.5em;
+}
+
+@media (max-width: 576px) {
+    .swal2-popup {
+        width: 90% !important;
+        margin: 0 auto;
+    }
+    
+    .service-badge {
+        font-size: 0.7rem;
+        padding: 3px 5px;
+    }
+}
+
+/* Enhanced scrollbar for table */
+.table-responsive::-webkit-scrollbar {
+    height: 6px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Hide mobile cards */
+.mobile-cards {
+    display: none !important;
+}
+
+/* Hide mobile table container */
+.mobile-table-container {
+    display: none !important;
+}
+
+/* Government Print Styles */
+@media print {
+    @page {
+        margin: 0.5in !important;
+        size: letter;
+    }
+    
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        font-family: "Times New Roman", Times, serif !important;
+        font-size: 12pt !important;
+        line-height: 1.2 !important;
+        color: #000 !important;
+        background: white !important;
+    }
+    
+    .content-wrapper {
+        margin: 0 !important;
+        padding: 0 !important;
+        background: white !important;
+    }
+    
+    /* Hide username column in print */
+    #staffTable th:nth-child(2),
+    #staffTable td:nth-child(2) {
+        display: none !important;
+    }
+    
+    /* Government header */
+    .print-government-header {
+        display: block !important;
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+    }
+    
+    .print-government-header .republic {
+        font-size: 14pt;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    .print-government-header .city {
+        font-size: 16pt;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+    
+    .print-government-header .document-title {
+        font-size: 14pt;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 10px 0 5px 0;
+    }
+    
+    .print-government-header .print-date {
+        font-size: 10pt;
+        margin-top: 5px;
+    }
+    
+    /* Report title */
+    .card-header {
+        background: white !important;
+        border: 2px solid #000 !important;
+        text-align: center;
+        padding: 15px !important;
+        margin-bottom: 15px !important;
+        display: none !important;
+    }
+    
+    .card-title {
+        font-size: 16pt !important;
+        font-weight: bold !important;
+        color: #000 !important;
+        text-transform: uppercase;
+    }
+    
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+        margin: 0 !important;
+        background: white !important;
+    }
+    
+    .table-container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Hide unnecessary elements in print */
+    .navbar,
+    .main-sidebar,
+    .card-header .btn,
+    .action-buttons,
+    .main-footer,
+    .dataTables_length,
+    .dataTables_filter,
+    .dataTables_info,
+    .dataTables_paginate,
+    .dt-buttons,
+    .content::before,
+    .content::after {
+        display: none !important;
+    }
+    
+    /* Table styling for government format */
+    .table-responsive {
+        overflow: visible !important;
+        border: 2px solid #000 !important;
+        page-break-inside: avoid;
+    }
+    
+    #staffTable {
+        width: 100% !important;
+        font-size: 10pt !important;
+        border-collapse: collapse !important;
+        border: 2px solid #000 !important;
+    }
+    
+    #staffTable thead {
+        background: #d9d9d9 !important;
+        border-bottom: 2px solid #000 !important;
+        display: table-header-group;
+    }
+    
+    #staffTable th {
+        background: #d9d9d9 !important;
+        color: #000 !important;
+        font-weight: bold !important;
+        border: 1px solid #000 !important;
+        padding: 8px 6px !important;
+        text-align: center !important;
+        font-size: 10pt !important;
+    }
+    
+    #staffTable td {
+        border: 1px solid #000 !important;
+        padding: 6px !important;
+        text-align: left !important;
+        font-size: 9pt !important;
+        vertical-align: top !important;
+    }
+    
+    #staffTable tbody tr:nth-child(even) {
+        background: #f2f2f2 !important;
+    }
+    
+    #staffTable tbody tr:nth-child(odd) {
+        background: white !important;
+    }
+    
+    /* Remove any styling from badges */
+    .service-badge {
+        background: #d9d9d9 !important;
+        color: #000 !important;
+        border: 1px solid #666 !important;
+        padding: 1px 4px !important;
+        margin: 1px !important;
+        font-size: 8pt !important;
+        display: inline-block;
+        border-radius: 2px !important;
+    }
+    
+    /* Print footer */
+    .print-footer {
+        display: block !important;
+        margin-top: 20px;
+        border-top: 1px solid #000;
+        padding-top: 10px;
+        font-size: 9pt;
+    }
+    
+    /* Ensure proper spacing */
+    .row {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .col-md-12 {
+        padding: 0 !important;
+    }
+    
+    /* Remove any colors */
+    * {
+        color: #000 !important;
+        background: transparent !important;
+    }
+    
+    /* Make sure table is readable */
+    #staffTable {
+        page-break-inside: auto;
+    }
+    
+    #staffTable tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+    
+    /* Government seal placeholder */
+    .government-seal {
+        display: none;
+    }
+    
+    /* Page breaks */
+    thead {
+        display: table-header-group;
+    }
+    
+    tbody {
+        display: table-row-group;
+    }
+    
+    tr {
+        page-break-inside: avoid;
+    }
+    
+    /* Ensure contact column is visible in print */
+    #staffTable th:nth-child(7),
+    #staffTable td:nth-child(7) {
+        display: table-cell !important;
+    }
+    
+    /* Hide actions column in print */
+    #staffTable th:last-child,
+    #staffTable td:last-child {
+        display: none !important;
+    }
+}
