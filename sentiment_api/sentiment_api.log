@@ -1,0 +1,262 @@
+2025-09-13 18:04:48,889 - __main__ - INFO - Starting background model initialization...
+2025-09-13 18:04:48,890 - __main__ - INFO - Starting Sentiment Analysis API on port 5000
+2025-09-13 18:04:48,890 - __main__ - INFO - Loading sentiment analysis model...
+2025-09-13 18:04:48,890 - __main__ - INFO - Debug mode: False
+2025-09-13 18:04:48,891 - __main__ - INFO - Attempting to load model: cardiffnlp/twitter-roberta-base-sentiment-latest
+2025-09-13 18:04:50,247 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.41:5000
+2025-09-13 18:04:50,249 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-13 18:04:52,570 - __main__ - INFO - Model cardiffnlp/twitter-roberta-base-sentiment-latest loaded successfully
+2025-09-13 18:04:52,570 - __main__ - INFO - Model successfully loaded and ready for use
+2025-09-13 18:06:39,561 - __main__ - INFO - Successfully analyzed sentiment for text length 40: neutral (confidence: 0.758)
+2025-09-13 18:06:39,626 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:06:39] "POST /analyze HTTP/1.1" 200 -
+2025-09-13 18:08:57,927 - __main__ - INFO - Successfully analyzed sentiment for text length 66: neutral (confidence: 0.752)
+2025-09-13 18:08:57,950 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:08:57] "POST /analyze HTTP/1.1" 200 -
+2025-09-13 18:14:58,535 - __main__ - INFO - Successfully analyzed sentiment for text length 118: positive (confidence: 0.975)
+2025-09-13 18:14:58,567 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2025 18:14:58] "POST /analyze HTTP/1.1" 200 -
+2025-09-14 13:14:12,881 - __main__ - INFO - Starting background model initialization...
+2025-09-14 13:14:12,883 - __main__ - INFO - Starting Sentiment Analysis API on port 5000
+2025-09-14 13:14:12,888 - __main__ - INFO - Loading sentiment analysis model...
+2025-09-14 13:14:12,889 - __main__ - INFO - Debug mode: False
+2025-09-14 13:14:12,889 - __main__ - INFO - Attempting to load model: tabularisai/multilingual-sentiment-analysis
+2025-09-14 13:14:14,291 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.41:5000
+2025-09-14 13:14:14,296 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-14 13:14:15,594 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-09-14 13:15:14,759 - __main__ - INFO - Model tabularisai/multilingual-sentiment-analysis loaded successfully
+2025-09-14 13:15:14,764 - __main__ - INFO - Model successfully loaded and ready for use
+2025-09-14 13:16:19,654 - __main__ - INFO - Successfully analyzed sentiment for text length 36: very negative (confidence: 0.461)
+2025-09-14 13:16:19,717 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 13:16:19] "POST /analyze HTTP/1.1" 200 -
+2025-09-14 13:26:46,633 - __main__ - INFO - Successfully analyzed sentiment for text length 36: very negative (confidence: 0.461)
+2025-09-14 13:26:46,658 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 13:26:46] "POST /analyze HTTP/1.1" 200 -
+2025-09-14 13:38:11,512 - __main__ - INFO - Successfully analyzed sentiment for text length 36: very negative (confidence: 0.461)
+2025-09-14 13:38:11,544 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 13:38:11] "POST /analyze HTTP/1.1" 200 -
+2025-09-14 13:59:09,362 - __main__ - INFO - Successfully analyzed sentiment for text length 36: very negative (confidence: 0.461)
+2025-09-14 13:59:09,422 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 13:59:09] "POST /analyze HTTP/1.1" 200 -
+2025-09-14 14:22:29,339 - __main__ - INFO - Successfully analyzed sentiment for text length 36: very negative (confidence: 0.461)
+2025-09-14 14:22:29,373 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:22:29] "POST /analyze HTTP/1.1" 200 -
+2025-09-14 14:25:36,678 - __main__ - INFO - Successfully analyzed sentiment for text length 36: very negative (confidence: 0.461)
+2025-09-14 14:25:36,706 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:25:36] "POST /analyze HTTP/1.1" 200 -
+2025-09-14 14:37:03,461 - __main__ - INFO - Successfully analyzed sentiment for text length 36: very negative (confidence: 0.461)
+2025-09-14 14:37:03,491 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:37:03] "POST /analyze HTTP/1.1" 200 -
+2025-09-14 14:41:58,324 - __main__ - INFO - Successfully analyzed sentiment for text length 36: very negative (confidence: 0.461)
+2025-09-14 14:41:58,384 - werkzeug - INFO - 127.0.0.1 - - [14/Sep/2025 14:41:58] "POST /analyze HTTP/1.1" 200 -
+2025-09-20 13:30:05,148 - __main__ - INFO - Starting background model initialization...
+2025-09-20 13:30:05,150 - __main__ - INFO - Starting Sentiment Analysis API on port 5000
+2025-09-20 13:30:05,154 - __main__ - INFO - Loading sentiment analysis model...
+2025-09-20 13:30:05,155 - __main__ - INFO - Debug mode: False
+2025-09-20 13:30:05,156 - __main__ - INFO - Attempting to load model: tabularisai/multilingual-sentiment-analysis
+2025-09-20 13:30:06,656 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.40:5000
+2025-09-20 13:30:06,658 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-20 13:30:09,284 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-09-20 13:30:59,859 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/tabularisai/multilingual-sentiment-analysis/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-09-20 13:32:08,007 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/tabularisai/multilingual-sentiment-analysis/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-09-20 13:32:51,878 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/tabularisai/multilingual-sentiment-analysis/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-09-20 13:33:51,984 - huggingface_hub.file_download - WARNING - Error while downloading from https://huggingface.co/tabularisai/multilingual-sentiment-analysis/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-09-20 13:34:11,954 - __main__ - INFO - Model tabularisai/multilingual-sentiment-analysis loaded successfully
+2025-09-20 13:34:11,957 - __main__ - INFO - Model successfully loaded and ready for use
+2025-09-20 13:37:32,481 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.14557883143424988}, {'label': 'Negative', 'score': 0.16384269297122955}, {'label': 'Neutral', 'score': 0.6022993922233582}, {'label': 'Positive', 'score': 0.05012871325016022}, {'label': 'Very Positive', 'score': 0.03815029561519623}]]
+2025-09-20 13:37:32,499 - __main__ - INFO - Successfully analyzed sentiment for text length 51: neutral (confidence: 0.602)
+2025-09-20 13:37:32,588 - werkzeug - INFO - 127.0.0.1 - - [20/Sep/2025 13:37:32] "POST /analyze HTTP/1.1" 200 -
+2025-09-29 12:12:55,986 - __main__ - INFO - Starting background model initialization...
+2025-09-29 12:12:55,987 - __main__ - INFO - Starting Sentiment Analysis API on port 5000
+2025-09-29 12:12:55,989 - __main__ - INFO - Loading sentiment analysis model...
+2025-09-29 12:12:55,990 - __main__ - INFO - Debug mode: False
+2025-09-29 12:12:55,991 - __main__ - INFO - Attempting to load model: tabularisai/multilingual-sentiment-analysis
+2025-09-29 12:12:57,378 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.45.65.82:5000
+2025-09-29 12:12:57,380 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-29 12:12:59,850 - __main__ - INFO - Model tabularisai/multilingual-sentiment-analysis loaded successfully
+2025-09-29 12:12:59,851 - __main__ - INFO - Model successfully loaded and ready for use
+2025-09-29 12:18:11,220 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.030382540076971054}, {'label': 'Negative', 'score': 0.691617488861084}, {'label': 'Neutral', 'score': 0.0625249445438385}, {'label': 'Positive', 'score': 0.1982012540102005}, {'label': 'Very Positive', 'score': 0.017273755744099617}]]
+2025-09-29 12:18:11,223 - __main__ - INFO - Successfully analyzed sentiment for text length 45: negative (confidence: 0.722)
+2025-09-29 12:18:11,239 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 12:18:11] "POST /analyze HTTP/1.1" 200 -
+2025-09-29 12:18:11,613 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.030382540076971054}, {'label': 'Negative', 'score': 0.691617488861084}, {'label': 'Neutral', 'score': 0.0625249445438385}, {'label': 'Positive', 'score': 0.1982012540102005}, {'label': 'Very Positive', 'score': 0.017273755744099617}]]
+2025-09-29 12:18:11,614 - __main__ - INFO - Successfully analyzed sentiment for text length 45: negative (confidence: 0.722)
+2025-09-29 12:18:11,617 - werkzeug - INFO - 127.0.0.1 - - [29/Sep/2025 12:18:11] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 17:44:49,091 - __main__ - INFO - Starting background model initialization...
+2025-10-11 17:44:49,099 - __main__ - INFO - Starting Sentiment Analysis API on port 5000
+2025-10-11 17:44:49,148 - __main__ - INFO - Loading sentiment analysis model...
+2025-10-11 17:44:49,149 - __main__ - INFO - Debug mode: False
+2025-10-11 17:44:49,149 - __main__ - INFO - Attempting to load model: tabularisai/multilingual-sentiment-analysis
+2025-10-11 17:44:51,392 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.40:5000
+2025-10-11 17:44:51,400 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-11 17:44:53,358 - __main__ - INFO - Model tabularisai/multilingual-sentiment-analysis loaded successfully
+2025-10-11 17:44:53,359 - __main__ - INFO - Model successfully loaded and ready for use
+2025-10-11 18:44:59,241 - __main__ - INFO - Starting model initialization...
+2025-10-11 18:44:59,242 - __main__ - INFO - Starting Sentiment + Translation API on port 5000
+2025-10-11 18:44:59,243 - __main__ - INFO - Loading sentiment analysis model...
+2025-10-11 18:44:59,244 - __main__ - INFO - Attempting to load model: tabularisai/multilingual-sentiment-analysis
+2025-10-11 18:45:00,643 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.40:5000
+2025-10-11 18:45:00,644 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-11 18:45:01,231 - __main__ - INFO - Model tabularisai/multilingual-sentiment-analysis loaded successfully
+2025-10-11 18:45:01,231 - __main__ - INFO - Sentiment analysis model loaded successfully
+2025-10-11 18:45:03,510 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-10-11 18:45:35,521 - __main__ - WARNING - Translation model failed to load: This tokenizer cannot be instantiated. Please make sure you have `sentencepiece` installed in order to use this tokenizer.
+2025-10-11 18:45:36,025 - huggingface_hub.file_download - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-10-11 18:48:54,242 - __main__ - WARNING - Translation failed (This tokenizer cannot be instantiated. Please make sure you have `sentencepiece` installed in order to use this tokenizer.), using original text
+2025-10-11 18:48:55,328 - __main__ - INFO - Analyzed: positive (0.55)
+2025-10-11 18:48:55,368 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 18:48:55] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 18:48:59,546 - __main__ - WARNING - Translation failed (This tokenizer cannot be instantiated. Please make sure you have `sentencepiece` installed in order to use this tokenizer.), using original text
+2025-10-11 18:48:59,634 - __main__ - INFO - Analyzed: positive (0.55)
+2025-10-11 18:48:59,635 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 18:48:59] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 18:51:03,087 - __main__ - WARNING - Translation failed (This tokenizer cannot be instantiated. Please make sure you have `sentencepiece` installed in order to use this tokenizer.), using original text
+2025-10-11 18:51:04,480 - __main__ - INFO - Analyzed: positive (0.55)
+2025-10-11 18:51:04,487 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 18:51:04] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 18:51:10,734 - __main__ - WARNING - Translation failed (This tokenizer cannot be instantiated. Please make sure you have `sentencepiece` installed in order to use this tokenizer.), using original text
+2025-10-11 18:51:11,219 - __main__ - INFO - Analyzed: positive (0.55)
+2025-10-11 18:51:11,221 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 18:51:11] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 19:09:18,839 - __main__ - INFO - Starting background model initialization...
+2025-10-11 19:09:18,840 - __main__ - INFO - Starting Sentiment Analysis API on port 5000
+2025-10-11 19:09:18,841 - __main__ - INFO - Loading sentiment analysis model...
+2025-10-11 19:09:18,841 - __main__ - INFO - Debug mode: False
+2025-10-11 19:09:18,841 - __main__ - INFO - Attempting to load model: tabularisai/multilingual-sentiment-analysis
+2025-10-11 19:09:20,225 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.40:5000
+2025-10-11 19:09:20,225 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-11 19:09:21,319 - __main__ - INFO - Model tabularisai/multilingual-sentiment-analysis loaded successfully
+2025-10-11 19:09:21,320 - __main__ - INFO - Model successfully loaded and ready for use
+2025-10-11 19:11:00,682 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.14557883143424988}, {'label': 'Negative', 'score': 0.16384269297122955}, {'label': 'Neutral', 'score': 0.6022993922233582}, {'label': 'Positive', 'score': 0.05012871325016022}, {'label': 'Very Positive', 'score': 0.03815029561519623}]]
+2025-10-11 19:11:00,701 - __main__ - INFO - Successfully analyzed sentiment for text length 51: neutral (confidence: 0.602)
+2025-10-11 19:11:00,752 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:11:00] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 19:11:01,168 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.14557883143424988}, {'label': 'Negative', 'score': 0.16384269297122955}, {'label': 'Neutral', 'score': 0.6022993922233582}, {'label': 'Positive', 'score': 0.05012871325016022}, {'label': 'Very Positive', 'score': 0.03815029561519623}]]
+2025-10-11 19:11:01,190 - __main__ - INFO - Successfully analyzed sentiment for text length 51: neutral (confidence: 0.602)
+2025-10-11 19:11:01,194 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:11:01] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 19:25:42,011 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.14557883143424988}, {'label': 'Negative', 'score': 0.16384269297122955}, {'label': 'Neutral', 'score': 0.6022993922233582}, {'label': 'Positive', 'score': 0.05012871325016022}, {'label': 'Very Positive', 'score': 0.03815029561519623}]]
+2025-10-11 19:25:42,028 - __main__ - INFO - Successfully analyzed sentiment for text length 51: neutral (confidence: 0.602)
+2025-10-11 19:25:42,036 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:25:42] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 19:25:42,451 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.14557883143424988}, {'label': 'Negative', 'score': 0.16384269297122955}, {'label': 'Neutral', 'score': 0.6022993922233582}, {'label': 'Positive', 'score': 0.05012871325016022}, {'label': 'Very Positive', 'score': 0.03815029561519623}]]
+2025-10-11 19:25:42,452 - __main__ - INFO - Successfully analyzed sentiment for text length 51: neutral (confidence: 0.602)
+2025-10-11 19:25:42,453 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:25:42] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 19:28:43,916 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.14557883143424988}, {'label': 'Negative', 'score': 0.16384269297122955}, {'label': 'Neutral', 'score': 0.6022993922233582}, {'label': 'Positive', 'score': 0.05012871325016022}, {'label': 'Very Positive', 'score': 0.03815029561519623}]]
+2025-10-11 19:28:43,926 - __main__ - INFO - Successfully analyzed sentiment for text length 51: neutral (confidence: 0.602)
+2025-10-11 19:28:43,932 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:28:43] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 19:28:44,330 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.14557883143424988}, {'label': 'Negative', 'score': 0.16384269297122955}, {'label': 'Neutral', 'score': 0.6022993922233582}, {'label': 'Positive', 'score': 0.05012871325016022}, {'label': 'Very Positive', 'score': 0.03815029561519623}]]
+2025-10-11 19:28:44,335 - __main__ - INFO - Successfully analyzed sentiment for text length 51: neutral (confidence: 0.602)
+2025-10-11 19:28:44,338 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:28:44] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 19:31:36,936 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.14557883143424988}, {'label': 'Negative', 'score': 0.16384269297122955}, {'label': 'Neutral', 'score': 0.6022993922233582}, {'label': 'Positive', 'score': 0.05012871325016022}, {'label': 'Very Positive', 'score': 0.03815029561519623}]]
+2025-10-11 19:31:36,947 - __main__ - INFO - Successfully analyzed sentiment for text length 51: neutral (confidence: 0.602)
+2025-10-11 19:31:36,957 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:31:36] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 19:31:37,265 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.14557883143424988}, {'label': 'Negative', 'score': 0.16384269297122955}, {'label': 'Neutral', 'score': 0.6022993922233582}, {'label': 'Positive', 'score': 0.05012871325016022}, {'label': 'Very Positive', 'score': 0.03815029561519623}]]
+2025-10-11 19:31:37,265 - __main__ - INFO - Successfully analyzed sentiment for text length 51: neutral (confidence: 0.602)
+2025-10-11 19:31:37,266 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:31:37] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 19:37:31,631 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.14557883143424988}, {'label': 'Negative', 'score': 0.16384269297122955}, {'label': 'Neutral', 'score': 0.6022993922233582}, {'label': 'Positive', 'score': 0.05012871325016022}, {'label': 'Very Positive', 'score': 0.03815029561519623}]]
+2025-10-11 19:37:31,647 - __main__ - INFO - Successfully analyzed sentiment for text length 51: neutral (confidence: 0.602)
+2025-10-11 19:37:31,668 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:37:31] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 19:37:32,005 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.14557883143424988}, {'label': 'Negative', 'score': 0.16384269297122955}, {'label': 'Neutral', 'score': 0.6022993922233582}, {'label': 'Positive', 'score': 0.05012871325016022}, {'label': 'Very Positive', 'score': 0.03815029561519623}]]
+2025-10-11 19:37:32,007 - __main__ - INFO - Successfully analyzed sentiment for text length 51: neutral (confidence: 0.602)
+2025-10-11 19:37:32,011 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 19:37:32] "POST /analyze HTTP/1.1" 200 -
+2025-10-11 20:12:53,066 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.14557883143424988}, {'label': 'Negative', 'score': 0.16384269297122955}, {'label': 'Neutral', 'score': 0.6022993922233582}, {'label': 'Positive', 'score': 0.05012871325016022}, {'label': 'Very Positive', 'score': 0.03815029561519623}]]
+2025-10-11 20:12:53,083 - __main__ - INFO - Successfully analyzed sentiment for text length 51: neutral (confidence: 0.602)
+2025-10-11 20:12:53,088 - werkzeug - INFO - 127.0.0.1 - - [11/Oct/2025 20:12:53] "POST /analyze HTTP/1.1" 200 -
+2025-10-14 13:16:26,386 - __main__ - INFO - Starting background model initialization...
+2025-10-14 13:16:26,388 - __main__ - INFO - Starting Sentiment Analysis API on port 5000
+2025-10-14 13:16:26,389 - __main__ - INFO - Loading sentiment analysis model...
+2025-10-14 13:16:26,390 - __main__ - INFO - Debug mode: False
+2025-10-14 13:16:26,390 - __main__ - INFO - Attempting to load model: tabularisai/multilingual-sentiment-analysis
+2025-10-14 13:16:27,797 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.45.65.82:5000
+2025-10-14 13:16:27,797 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-14 13:16:29,593 - __main__ - INFO - Model tabularisai/multilingual-sentiment-analysis loaded successfully
+2025-10-14 13:16:29,594 - __main__ - INFO - Model successfully loaded and ready for use
+2025-10-14 13:55:58,853 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.05786437541246414}, {'label': 'Negative', 'score': 0.0731021910905838}, {'label': 'Neutral', 'score': 0.7332854866981506}, {'label': 'Positive', 'score': 0.0945640504360199}, {'label': 'Very Positive', 'score': 0.04118380323052406}]]
+2025-10-14 13:55:58,885 - __main__ - INFO - Successfully analyzed sentiment for text length 39: neutral (confidence: 0.733)
+2025-10-14 13:55:58,965 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 13:55:58] "POST /analyze HTTP/1.1" 200 -
+2025-10-14 14:11:40,058 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.11245369911193848}, {'label': 'Negative', 'score': 0.4712126553058624}, {'label': 'Neutral', 'score': 0.2810962200164795}, {'label': 'Positive', 'score': 0.09848375618457794}, {'label': 'Very Positive', 'score': 0.03675375133752823}]]
+2025-10-14 14:11:40,082 - __main__ - INFO - Successfully analyzed sentiment for text length 35: negative (confidence: 0.584)
+2025-10-14 14:11:40,112 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 14:11:40] "POST /analyze HTTP/1.1" 200 -
+2025-10-14 14:25:45,714 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.41276562213897705}, {'label': 'Negative', 'score': 0.44466549158096313}, {'label': 'Neutral', 'score': 0.08637986332178116}, {'label': 'Positive', 'score': 0.02975982241332531}, {'label': 'Very Positive', 'score': 0.02642926760017872}]]
+2025-10-14 14:25:45,730 - __main__ - INFO - Successfully analyzed sentiment for text length 21: negative (confidence: 0.857)
+2025-10-14 14:25:45,738 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 14:25:45] "POST /analyze HTTP/1.1" 200 -
+2025-10-14 14:33:04,608 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.05442067235708237}, {'label': 'Negative', 'score': 0.7431449294090271}, {'label': 'Neutral', 'score': 0.07841174304485321}, {'label': 'Positive', 'score': 0.1002548560500145}, {'label': 'Very Positive', 'score': 0.023767879232764244}]]
+2025-10-14 14:33:04,626 - __main__ - INFO - Successfully analyzed sentiment for text length 50: negative (confidence: 0.798)
+2025-10-14 14:33:04,645 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 14:33:04] "POST /analyze HTTP/1.1" 200 -
+2025-10-14 14:45:37,344 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.2922726273536682}, {'label': 'Negative', 'score': 0.6115273237228394}, {'label': 'Neutral', 'score': 0.05131853371858597}, {'label': 'Positive', 'score': 0.023168452084064484}, {'label': 'Very Positive', 'score': 0.021713072434067726}]]
+2025-10-14 14:45:37,350 - __main__ - INFO - Successfully analyzed sentiment for text length 22: negative (confidence: 0.904)
+2025-10-14 14:45:37,363 - werkzeug - INFO - 127.0.0.1 - - [14/Oct/2025 14:45:37] "POST /analyze HTTP/1.1" 200 -
+2025-10-15 14:57:08,472 - __main__ - INFO - Starting background model initialization...
+2025-10-15 14:57:08,473 - __main__ - INFO - Starting Sentiment Analysis API on port 5000
+2025-10-15 14:57:08,474 - __main__ - INFO - Loading sentiment analysis model...
+2025-10-15 14:57:08,475 - __main__ - INFO - Debug mode: False
+2025-10-15 14:57:08,475 - __main__ - INFO - Attempting to load model: tabularisai/multilingual-sentiment-analysis
+2025-10-15 14:57:09,856 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.45.65.82:5000
+2025-10-15 14:57:09,856 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-15 14:57:11,976 - __main__ - INFO - Model tabularisai/multilingual-sentiment-analysis loaded successfully
+2025-10-15 14:57:11,977 - __main__ - INFO - Model successfully loaded and ready for use
+2025-10-15 15:38:44,937 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.383263498544693}, {'label': 'Negative', 'score': 0.4937094748020172}, {'label': 'Neutral', 'score': 0.07272084057331085}, {'label': 'Positive', 'score': 0.02770186774432659}, {'label': 'Very Positive', 'score': 0.02260430157184601}]]
+2025-10-15 15:38:44,979 - __main__ - INFO - Successfully analyzed sentiment for text length 23: negative (confidence: 0.877)
+2025-10-15 15:38:45,147 - werkzeug - INFO - 127.0.0.1 - - [15/Oct/2025 15:38:45] "POST /analyze HTTP/1.1" 200 -
+2025-10-18 16:27:31,067 - __main__ - INFO - Starting background model initialization...
+2025-10-18 16:27:31,069 - __main__ - INFO - Starting Sentiment Analysis API on port 5000
+2025-10-18 16:27:31,070 - __main__ - INFO - Loading sentiment analysis model...
+2025-10-18 16:27:31,071 - __main__ - INFO - Debug mode: False
+2025-10-18 16:27:31,071 - __main__ - INFO - Attempting to load model: tabularisai/multilingual-sentiment-analysis
+2025-10-18 16:27:32,501 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.40:5000
+2025-10-18 16:27:32,502 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-18 16:27:33,165 - __main__ - INFO - Model tabularisai/multilingual-sentiment-analysis loaded successfully
+2025-10-18 16:27:33,167 - __main__ - INFO - Model successfully loaded and ready for use
+2025-10-18 16:27:51,585 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.1448027342557907}, {'label': 'Negative', 'score': 0.16728092730045319}, {'label': 'Neutral', 'score': 0.48448047041893005}, {'label': 'Positive', 'score': 0.11904346197843552}, {'label': 'Very Positive', 'score': 0.0843924731016159}]]
+2025-10-18 16:27:51,585 - __main__ - INFO - Successfully analyzed sentiment for text length 20: neutral (confidence: 0.484)
+2025-10-18 16:27:51,587 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2025 16:27:51] "POST /analyze HTTP/1.1" 200 -
+2025-10-18 16:41:41,350 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.20363590121269226}, {'label': 'Negative', 'score': 0.20156367123126984}, {'label': 'Neutral', 'score': 0.496952086687088}, {'label': 'Positive', 'score': 0.05556400120258331}, {'label': 'Very Positive', 'score': 0.042284321039915085}]]
+2025-10-18 16:41:41,386 - __main__ - INFO - Successfully analyzed sentiment for text length 22: neutral (confidence: 0.497)
+2025-10-18 16:41:41,420 - werkzeug - INFO - 127.0.0.1 - - [18/Oct/2025 16:41:41] "POST /analyze HTTP/1.1" 200 -
+2025-10-24 18:30:51,240 - __main__ - INFO - Starting background model initialization...
+2025-10-24 18:30:51,242 - __main__ - INFO - Starting Sentiment Analysis API on port 5000
+2025-10-24 18:30:51,243 - __main__ - INFO - Loading sentiment analysis model...
+2025-10-24 18:30:51,243 - __main__ - INFO - Debug mode: False
+2025-10-24 18:30:51,244 - __main__ - INFO - Attempting to load model: tabularisai/multilingual-sentiment-analysis
+2025-10-24 18:30:52,694 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.41:5000
+2025-10-24 18:30:52,694 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-24 18:30:53,390 - __main__ - INFO - Model tabularisai/multilingual-sentiment-analysis loaded successfully
+2025-10-24 18:30:53,390 - __main__ - INFO - Model successfully loaded and ready for use
+2025-10-24 18:31:39,467 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.3227899670600891}, {'label': 'Negative', 'score': 0.44155192375183105}, {'label': 'Neutral', 'score': 0.1459248811006546}, {'label': 'Positive', 'score': 0.05135606229305267}, {'label': 'Very Positive', 'score': 0.038377150893211365}]]
+2025-10-24 18:31:39,468 - __main__ - INFO - Successfully analyzed sentiment for text length 19: negative (confidence: 0.764)
+2025-10-24 18:31:39,469 - werkzeug - INFO - 127.0.0.1 - - [24/Oct/2025 18:31:39] "POST /analyze HTTP/1.1" 200 -
+2025-10-31 09:32:02,580 - __main__ - INFO - Starting background model initialization...
+2025-10-31 09:32:02,582 - __main__ - INFO - Starting Sentiment Analysis API on port 5000
+2025-10-31 09:32:02,583 - __main__ - INFO - Loading sentiment analysis model...
+2025-10-31 09:32:02,584 - __main__ - INFO - Debug mode: False
+2025-10-31 09:32:02,584 - __main__ - INFO - Attempting to load model: tabularisai/multilingual-sentiment-analysis
+2025-10-31 09:32:02,662 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.155:5000
+2025-10-31 09:32:02,663 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-10-31 09:32:06,461 - __main__ - INFO - Model tabularisai/multilingual-sentiment-analysis loaded successfully
+2025-10-31 09:32:06,461 - __main__ - INFO - Model successfully loaded and ready for use
+2025-10-31 11:02:20,697 - __main__ - INFO - Raw model output: [[{'label': 'Very Negative', 'score': 0.2977808117866516}, {'label': 'Negative', 'score': 0.6114227175712585}, {'label': 'Neutral', 'score': 0.0458904504776001}, {'label': 'Positive', 'score': 0.024370620027184486}, {'label': 'Very Positive', 'score': 0.020535452291369438}]]
+2025-10-31 11:02:20,723 - __main__ - INFO - Successfully analyzed sentiment for text length 48: negative (confidence: 0.909)
+2025-10-31 11:02:20,827 - werkzeug - INFO - 127.0.0.1 - - [31/Oct/2025 11:02:20] "POST /analyze HTTP/1.1" 200 -
