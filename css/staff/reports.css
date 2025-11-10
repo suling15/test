@@ -1,0 +1,772 @@
+body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .main-header {
+        background: linear-gradient(135deg, #9e9fd3 0%, #667eea 100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 57px;
+        z-index: 1035;
+        margin-left: 250px;
+        transition: margin-left 0.3s ease-in-out;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+    
+    .main-sidebar {
+      background: linear-gradient(135deg, rgba(30, 30, 40, 0.95) 0%, rgba(50, 50, 70, 0.95) 100%), url('sidebar.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+      z-index: 1030;
+      left: -250px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .sidebar-open .main-sidebar {
+      left: 0;
+      transform: translateX(0);
+    }
+
+    .main-sidebar::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, rgba(30, 30, 40, 0.9) 0%, rgba(50, 50, 70, 0.85) 100%);
+      z-index: 1;
+    }
+
+    .sidebar {
+      position: relative;
+      z-index: 2;
+      width: 250px;
+    }
+
+    .nav-sidebar .nav-link {
+      color: #cbd5e0;
+      padding: 14px 20px;
+      margin: 3px 12px;
+      border-radius: 8px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-weight: 500;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-sidebar .nav-link::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 3px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      transform: scaleY(0);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-sidebar .nav-link:hover {
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      transform: translateX(8px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .nav-sidebar .nav-link:hover::before {
+      transform: scaleY(1);
+    }
+
+    .nav-sidebar .nav-link.active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      transform: translateX(5px);
+    }
+
+    .nav-sidebar .nav-link.active::before {
+      transform: scaleY(1);
+      background: #fff;
+    }
+
+    .nav-treeview .nav-link {
+      padding-left: 3.5rem;
+      font-size: 14px;
+      margin: 2px 12px;
+      border-radius: 6px;
+    }
+
+.user-panel .info a {
+    color: white;
+}
+
+.content-wrapper {
+    margin-left: 250px;
+    margin-top: 40px;
+    padding: 15px;
+    min-height: 100vh;
+    position: relative;
+    z-index: 800;
+}
+
+.main-footer {
+    background-color: #f3f4f6;
+    border-top: 1px solid #ddd;
+    font-size: 12px;
+    margin-left: 250px;
+    z-index: 800;
+}
+
+
+/* FIXED: Logo header display */
+.logo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: row;
+}
+
+.logo-header img {
+    height: 70px;
+    width: auto;
+    margin: 0 10px;
+}
+
+.logo-header .report-title {
+    flex: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.no-feedback {
+    color: #6c757d;
+    font-style: italic;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+    font-size: 0.9rem;
+}
+
+.form-inline {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-inline .form-control,
+.form-inline select {
+    margin: 5px 0;
+    padding: 8px 10px;
+    width: 100%;
+}
+
+.form-inline label {
+    margin: 0;
+    font-weight: bold;
+}
+
+.card-header {
+    background: linear-gradient(135deg, #9e9fd3ff, #858586ff);
+    color: white;
+    padding: 10px 15px;
+}
+
+.card-title {
+    font-size: 1.1rem;
+}
+
+/* FIXED: Table borders */
+#reportTable {
+    border-collapse: collapse !important;
+    width: 100%;
+}
+
+#reportTable th,
+#reportTable td {
+    border: 1px solid #dee2e6 !important;
+    padding: 8px;
+    text-align: center;
+}
+
+#reportTable thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6 !important;
+}
+
+#reportTable tfoot tr {
+    background-color: #f8f9fa !important;
+}
+
+#reportTable tfoot td {
+    font-weight: bold;
+    border-top: 2px solid #dee2e6 !important;
+}
+
+/* Ensure table responsive container shows borders */
+.table-responsive {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+/* Fix badge alignment */
+#reportTable .badge {
+    min-width: 40px;
+    padding: 5px 8px;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 991.98px) {
+    .content-wrapper, .main-footer {
+        margin-left: 0;
+    }
+    
+    /* Fixed sidebar positioning and z-index */
+    .main-sidebar {
+        transform: translateX(-250px);
+        z-index: 1040; /* Increased z-index to be above overlay */
+        box-shadow: 3px 0 6px rgba(0,0,0,0.16);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 100vh;
+        overflow-y: auto;
+    }
+    
+    /* When sidebar is open */
+    .sidebar-open .main-sidebar {
+        transform: translateX(0);
+    }
+    
+    /* Fixed overlay z-index to be below sidebar but above content */
+    .sidebar-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 1035; /* Below sidebar but above content */
+    }
+    
+    /* Show overlay when sidebar is open */
+    .sidebar-open .sidebar-overlay {
+        display: block;
+    }
+    
+    /* Ensure sidebar content is clickable */
+    .main-sidebar .sidebar {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        pointer-events: auto; /* Ensure clicks work */
+    }
+    
+    /* Fix for nav items */
+    .main-sidebar .nav-sidebar .nav-item {
+        pointer-events: auto;
+    }
+    
+    .main-sidebar .nav-sidebar .nav-link {
+        pointer-events: auto;
+        position: relative;
+        z-index: 3;
+    }
+    
+    /* Prevent content from interfering with sidebar */
+    .content-wrapper {
+        position: relative;
+        z-index: 1030; /* Lower than sidebar and overlay */
+    }
+    
+    /* Header adjustments */
+    .main-header {
+        z-index: 1031; /* Above content but below sidebar */
+    }
+    
+    .logo-header {
+        flex-direction: column;
+    }
+    
+    .logo-header .report-title {
+        font-size: 1.1rem;
+        order: -1;
+        margin-bottom: 10px;
+    }
+    
+    .logo-header img {
+        height: 70px;
+        margin: 5px 0;
+    }
+    
+    .form-inline {
+        flex-direction: column;
+    }
+    
+    .form-inline .form-control,
+    .form-inline select {
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .card-header {
+        padding: 10px 15px;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .main-footer {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+body.sidebar-open {
+    overflow: hidden;
+}
+
+.navbar-nav .nav-link[data-widget="pushmenu"] {
+    cursor: pointer;
+    z-index: 1050;
+    position: relative;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .main-sidebar .nav-sidebar .nav-link {
+        padding: 12px 16px; 
+    }
+    
+    .main-sidebar .nav-treeview .nav-link {
+        padding: 12px 2.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .content-wrapper {
+        padding: 20px;
+    }
+    
+    .logo-header {
+        flex-direction: row;
+    }
+    
+    .logo-header .report-title {
+        font-size: 1.3rem;
+        order: 0;
+        margin-bottom: 0;
+    }
+    
+    .logo-header img {
+        height: 100px;
+    }
+    
+    .form-inline {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .form-inline .form-control,
+    .form-inline select {
+        width: auto;
+        margin: 0 5px;
+    }
+    
+    .card-header {
+        padding: 10px 20px;
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+    }
+    
+    .main-footer {
+        font-size: 14px;
+        text-align: right;
+    }
+}
+
+/* Additional mobile optimizations */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.btn {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.dataTables_wrapper .dt-buttons {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.dataTables_wrapper .dt-buttons .btn {
+    margin: 2px;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+@media (min-width: 768px) {
+    .dataTables_wrapper .dt-buttons {
+        text-align: left;
+    }
+    
+    .dataTables_wrapper .dt-buttons .btn {
+        font-size: 14px;
+    }
+}
+
+/* Chart container responsiveness */
+.chart-container {
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .chart-container {
+        height: 300px;
+    }
+}
+
+/* Summary statistics adjustments */
+.summary-stats .col-4 {
+    margin-bottom: 10px;
+}
+
+.summary-stats .bg-success,
+.summary-stats .bg-danger,
+.summary-stats .bg-warning {
+    padding: 10px !important;
+}
+
+.summary-stats h4 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+    .summary-stats h4 {
+        font-size: 1.5rem;
+    }
+    
+    .summary-stats .bg-success,
+    .summary-stats .bg-danger,
+    .summary-stats .bg-warning {
+        padding: 15px !important;
+    }
+}
+
+@media print {
+    .card, .table {
+        break-inside: avoid;
+    }
+  
+    .logo-header {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .logo-header img {
+        height: 100px;
+    }
+    
+    .report-title {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .dataTables_info, .dataTables_paginate {
+        display: none;
+    }
+    
+    .chart-container {
+        width: 500px !important;
+        height: 500px !important;
+        margin: 0 auto;
+    }
+    
+    .chartjs-size-monitor {
+        display: none;
+    }
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+.summary-stats h4 {
+    margin-bottom: 0;
+}
+
+
+    .no-image-placeholder {
+        width: 100px;
+        height: 100px;
+        background: #f8f9fa;
+        border: 2px dashed #dee2e6;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #6c757d;
+        font-size: 12px;
+        text-align: center;
+        flex-direction: column;
+    }
+    .no-image-placeholder i {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    .logo-header img {
+        max-height: 100px;
+        max-width: 100px;
+        object-fit: contain;
+    }
+    .logo-header .no-image-placeholder {
+        margin: 0 10px;
+    }
+    
+    /* Print-specific styles */
+    @media print {
+        /* Hide unnecessary elements */
+        .card-header, 
+        .navbar, 
+        .main-sidebar, 
+        .main-footer, 
+        .dataTables_wrapper .dt-buttons,
+        .dataTables_info, 
+        .dataTables_paginate,
+        .chart-container,
+        .form-inline,
+        .alert,
+        .btn,
+        .badge,
+        .row.mb-3,
+        .summary-stats,
+        #reportTable_wrapper,
+        .dataTables_wrapper,
+        .table-responsive {
+            display: none !important;
+        }
+        
+        /* Show only the essential report content */
+        .content-wrapper {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+        
+        .card {
+            border: none !important;
+            box-shadow: none !important;
+            margin: 0 !important;
+        }
+        
+        .card-body {
+            padding: 0 !important;
+        }
+        
+        /* Header styling like screenshot */
+        .logo-header {
+            display: flex !important;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #000;
+        }
+        
+        .logo-header img {
+            height: 80px;
+            width: auto;
+        }
+        
+        .logo-header .report-title {
+            flex: 1;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 20px;
+        }
+        
+        /* Service info styling for print - EXACTLY LIKE SCREENSHOT */
+        .print-service-info {
+            display: block !important;
+            text-align: center;
+            margin: 10px 0 15px 0;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+        
+        /* Table styling EXACTLY LIKE SCREENSHOT */
+        #reportTable {
+            width: 100% !important;
+            border: 2px solid #000 !important;
+            border-collapse: collapse !important;
+            font-size: 11px;
+            margin-top: 10px;
+        }
+        
+        #reportTable th {
+            background-color: #f0f0f0 !important;
+            border: 1px solid #000 !important;
+            padding: 8px 4px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        #reportTable td {
+            border: 1px solid #000 !important;
+            padding: 6px 4px;
+            text-align: center;
+        }
+        
+        #reportTable tfoot tr {
+            background-color: #f8f9fa !important;
+            font-weight: bold;
+        }
+        
+        #reportTable tfoot td {
+            border-top: 2px solid #000 !important;
+        }
+        
+        /* Remove badges and show plain numbers in print */
+        #reportTable .badge {
+            display: none !important;
+        }
+        
+        #reportTable td:nth-child(2),
+        #reportTable td:nth-child(3),
+        #reportTable td:nth-child(4),
+        #reportTable td:nth-child(5),
+        #reportTable tfoot td:nth-child(2),
+        #reportTable tfoot td:nth-child(3),
+        #reportTable tfoot td:nth-child(4),
+        #reportTable tfoot td:nth-child(5) {
+            font-weight: bold;
+        }
+        
+        /* Ensure proper page breaks */
+        .card, .table {
+            break-inside: avoid;
+        }
+        
+        /* Body adjustments for print */
+        body {
+            background: white !important;
+            color: black !important;
+            font-size: 12px;
+            margin: 0;
+            padding: 15px;
+        }
+        
+        /* Hide chart containers */
+        .chart-container {
+            display: none !important;
+        }
+        
+        /* Remove any shadows and backgrounds */
+        * {
+            background: transparent !important;
+            color: black !important;
+            text-shadow: none !important;
+        }
+        
+        /* Page margins */
+        @page {
+            margin: 0.5cm;
+        }
+    }
+
+    /* Regular screen styles */
+    .logo-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        flex-direction: row;
+    }
+
+    .logo-header img {
+        height: 70px;
+        width: auto;
+        margin: 0 10px;
+    }
+
+    .logo-header .report-title {
+        flex: 1;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin: 0 20px;
+    }
+
+    .print-service-info {
+        display: none;
+    }
+
+    /* Table borders for screen */
+    #reportTable {
+        border-collapse: collapse !important;
+        width: 100%;
+    }
+
+    #reportTable th,
+    #reportTable td {
+        border: 1px solid #dee2e6 !important;
+        padding: 8px;
+        text-align: center;
+    }
+
+    #reportTable thead th {
+        background-color: #f8f9fa;
+        border-bottom: 2px solid #dee2e6 !important;
+    }
+
+    #reportTable tfoot tr {
+        background-color: #f8f9fa !important;
+    }
+
+    #reportTable tfoot td {
+        font-weight: bold;
+        border-top: 2px solid #dee2e6 !important;
+    }
+
+    /* Ensure table responsive container shows borders */
+    .table-responsive {
+        border: 1px solid #dee2e6;
+        border-radius: 4px;
+    }
+ 
