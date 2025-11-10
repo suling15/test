@@ -1,0 +1,117 @@
+/* Government-style theme for Cadiz City admin pages */
+:root{
+  --gov-navy: #0b3d91;
+  --gov-accent: #0b67c2;
+  --gov-sidebar: #0f294f;
+  --gov-muted: #6c757d;
+  --gov-bg: #f5f7fa;
+  --gov-surface: #ffffff;
+}
+
+html,body{
+  height:100%;
+}
+body{
+  font-family: 'Segoe UI', Roboto, 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--gov-bg);
+  color: #222;
+  font-size:14px;
+}
+
+/* Header */
+.main-header{
+  background: var(--gov-navy) !important;
+  color: #fff;
+  position: fixed;
+  top:0; left:0; right:0;
+  height:64px;
+  z-index:1035;
+  margin-left:250px;
+  display:flex;
+  align-items:center;
+  padding:0 1rem;
+  box-shadow: 0 2px 6px rgba(11,61,145,0.12);
+}
+
+.gov-brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-left:0.5rem;
+}
+
+.gov-logo{
+  width:44px; height:44px; object-fit:cover; border-radius:6px; border:2px solid rgba(255,255,255,0.12);
+}
+
+.gov-city{
+  font-weight:700; color:#fff; font-size:0.95rem; letter-spacing:0.6px;
+}
+
+.gov-subtitle{
+  display:block; font-size:0.72rem; color:rgba(255,255,255,0.9);
+  line-height:1;
+}
+
+/* Sidebar */
+.main-sidebar{ background: linear-gradient(180deg,var(--gov-sidebar), #09213b) !important; }
+.main-sidebar::before{ display:none; }
+.sidebar{ z-index:2; width:250px; }
+.user-panel .info a{ color:#fff; font-weight:600 }
+
+.nav-sidebar .nav-link{ color: rgba(255,255,255,0.9); padding:10px 16px; margin:4px 8px; border-radius:6px; transition:all .18s ease; }
+.nav-sidebar .nav-link:hover{ background: rgba(255,255,255,0.05); transform: translateX(4px); }
+.nav-sidebar .nav-link.active{ background: linear-gradient(90deg,var(--gov-accent), #2e59d9); color:#fff; box-shadow:0 4px 14px rgba(11,61,145,0.12); }
+.nav-treeview .nav-link{ padding-left:3rem; font-size:14px; }
+
+/* Content wrapper adjusts for fixed header */
+.content-wrapper{ padding:22px; flex:1; overflow-y:auto; transition:margin-left .3s ease; margin-top:72px; }
+@media (min-width:992px){ .content-wrapper{ margin-left:250px; } }
+.sidebar-open .content-wrapper{ margin-left:250px; }
+
+/* Footer */
+.main-footer{ background:var(--gov-surface); border-top:1px solid #e6e9ef; padding:10px 20px; }
+@media (min-width:992px){ .main-footer{ margin-left:250px; text-align:right; } }
+
+/* Cards and boxes */
+.smaller-box{ border-radius:8px; box-shadow:0 6px 18px rgba(16,24,40,0.04); transition:transform .18s ease; margin-bottom:15px; height:80px; padding:12px; display:flex; align-items:center; position:relative; overflow:hidden; }
+.smaller-box:hover{ transform:translateY(-3px); }
+.smaller-box .icon{ font-size:1.5rem; position:absolute; top:50%; right:14px; transform:translateY(-50%); color:rgba(255,255,255,0.22); }
+.smaller-box .inner h3{ font-size:1.85rem; margin:0; font-weight:700; }
+.smaller-box .inner p{ margin:2px 0 0 0; font-size:0.95rem; }
+
+.bg-gradient-primary{ background: linear-gradient(90deg,var(--gov-accent), var(--gov-navy)) !important; color:#fff; }
+.bg-gradient-success{ background: linear-gradient(90deg,#17a673,#1cc88a) !important; color:#fff; }
+.bg-gradient-info{ background: linear-gradient(90deg,#2c9faf,#36b9cc) !important; color:#fff; }
+.bg-gradient-warning{ background: linear-gradient(90deg,#f6c23e,#f4b619) !important; color:#222; }
+
+/* Activity and charts */
+.activity-card{ border-radius:10px; background:var(--gov-surface); box-shadow:0 6px 16px rgba(12,18,34,0.04); margin-bottom:18px; }
+.activity-card .card-header{ background:transparent; color:var(--gov-navy); border-bottom:0; font-weight:700; }
+.chart-container-wrapper{ border:1px solid #e9edf6; border-radius:8px; padding:10px; background:#fbfdff; }
+.chart-container{ min-height:300px; width:100%; }
+
+.activity-item{ border-left:3px solid #e6eefb; padding:10px 14px; margin:12px 0; position:relative; }
+.activity-item.feedback{ border-left-color:var(--gov-accent); }
+.activity-item.response{ border-left-color:#17a673; }
+.activity-item::before{ content:''; position:absolute; left:-8px; top:14px; width:12px; height:12px; border-radius:50%; background:#e1e5f7; }
+.activity-item.feedback::before{ background:var(--gov-accent); }
+.activity-item.response::before{ background:#17a673; }
+.activity-time{ font-size:12px; color:var(--gov-muted); }
+.activity-user{ font-weight:700; color:var(--gov-navy); }
+
+/* Controls and small responsive tweaks */
+.chart-controls{ display:flex; align-items:center; gap:10px; }
+.month-year-selector{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+.month-year-selector .form-control{ min-width:120px; }
+@media (max-width:576px){ .month-year-selector{ flex-direction:column; align-items:stretch; } .month-year-selector .form-control{ width:100%; } .main-header{ padding:0 .5rem; } }
+
+/* Accessibility helpers */
+.sr-only{ position:absolute!important; width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0; }
+
+/* Small visual polish for navbar items */
+.navbar-nav .nav-link{ color:rgba(255,255,255,0.95); }
+.navbar-nav .nav-link .img-circle{ border-radius:50%; }
+
+/* Make sure charts and canvas inherit good background */
+canvas{ background:transparent !important; }
